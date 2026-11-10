@@ -1,24 +1,88 @@
+
+# ==========================================
+# WORKFOLIO - EMPLOYEE MANAGEMENT SYSTEM
+# ==========================================
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+yarn-error.log*git check-ignore -v backend/src/main/resources/application.properties
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node.js / React
+**/node_modules/
+**/dist/
+**/dist-ssr/
 *.local
 
-# Editor directories and files
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# SPRING BOOT / MAVEN
+# ==========================================
+
+# Maven generated files
+**/target/
+
+# Maven wrapper JAR
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Java generated files
+*.class
+*.jar
+*.war
+
+# Eclipse / STS
+.apt_generated/
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# ==========================================
+# VS CODE / EDITORS
+# ==========================================
+
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ==========================================
+# WORKFOLIO BACKEND SECRETS
+# ==========================================
+
+# Local database and JWT configuration
+backend/src/main/resources/application.properties
+
+# ==========================================
+# TEMPORARY / OPERATING SYSTEM FILES
+# ==========================================
+
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
