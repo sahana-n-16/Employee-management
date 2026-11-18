@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "714b4f52-43c7-4f54-8d75-1b0a3b96122b",
+    "name": "Leave Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60109024",
+    "_collection_link": "https://go.postman.co/collection/60109024-714b4f52-43c7-4f54-8d75-1b0a3b96122b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Apply for Leave",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"employeeId\": 1,\r\n    \"leaveType\": \"CASUAL\",\r\n    \"startDate\": \"2026-12-14\",\r\n    \"endDate\": \"2026-12-16\",\r\n    \"reason\": \"Personal work\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/apply",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "apply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Employee Leave History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Employee Leave Balance",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/balance/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "balance",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pending Leave Applications",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/admin/pending",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "admin",
+            "pending"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Approve Leave Application",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/admin/5/approve?remarks=Approved",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "admin",
+            "5",
+            "approve"
+          ],
+          "query": [
+            {
+              "key": "remarks",
+              "value": "Approved"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reject Leave Application",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/leaves/admin/3/reject?remarks=Insufficient justification",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "leaves",
+            "admin",
+            "3",
+            "reject"
+          ],
+          "query": [
+            {
+              "key": "remarks",
+              "value": "Insufficient justification"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
